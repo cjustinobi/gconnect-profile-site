@@ -1,7 +1,7 @@
 <template>
     <div class="mobile-footer">
         <span class="about"><nuxt-link :to="homeAbout"><i :class="homeAboutIcon"></i></nuxt-link></span>
-        <span class="portfolio"><nuxt-link to="/about"><i class="fa fa-code"></i></nuxt-link></span>
+        <span class="portfolio"><nuxt-link to="/portfolio"><i class="fa fa-code"></i></nuxt-link></span>
         <span class="contactt"><nuxt-link to="/contact"><i class="fa fa-address-card"></i></nuxt-link></span>
     </div>
 </template>

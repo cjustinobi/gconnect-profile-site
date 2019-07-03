@@ -47,6 +47,15 @@
 
         components: { AboutMobile, Contact },
 
+        head () {
+            return {
+                title: 'About - Glory Agatevure',
+                meta: [
+                    { hid: 'description', name: 'description', content: 'I\'m a tech lover. I blog on https://medium.com/@agatevureglory' }
+                ]
+            }
+        }
+
     }
 </script>
 
@@ -92,16 +101,7 @@
         padding-left: 24px;
         position: relative;
     }
-    .go-home{
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        cursor: pointer;
-        z-index: 100;
-    }
-    .go-home a{
-        color: #FF4081;
-    }
+
     .socials{
         background: url('../assets/img/pycon.jpg');
         background-position: center center;
@@ -218,6 +218,16 @@
             display: grid;
             grid-template: 1fr 1fr / repeat(3, 30% 40% 30%);
             color: #fafafa;
+        }
+        .go-home{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .go-home a{
+            color: #FF4081;
         }
     }
 

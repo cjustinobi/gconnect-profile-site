@@ -55,6 +55,15 @@
 
     export default {
 
+        head () {
+            return {
+                title: 'Glory Agatevure',
+                meta: [
+                    { hid: 'description', name: 'description', content: 'Welcome to my Portfolio site.' }
+                ]
+            }
+        },
+
         data() {
             return {
                 show: false,
@@ -149,7 +158,7 @@
         display: block;
         color: rgba(220, 226, 255, 0.66);
     }
-    /*.sidenav-backdrop {
+    /*.sidenav-backdcolor: rgba(220, 226, 255, 0.66);rop {
         width: 50%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
@@ -194,9 +203,10 @@
         align-content: center;
     }
     .right{
-        background: url('../assets/img/agat.jpg');
+        background: url('../assets/img/agate.png');
         background-size: cover;
         background-position: center top;
+        background-color: rgba(220, 226, 255, 0.66);
     }
 
     .center-button{
@@ -303,7 +313,7 @@
         }
     }
 
-    @media(max-width: 767px) {
+    @media(max-width: 399px) {
         .left, .right, .sidenav, .center-button{
             display: none;
             transition: all .3s ease;
@@ -313,6 +323,24 @@
         }
         .mobile-home{
             min-height: 100vh;
+        }
+    }
+
+    @media(max-width: 767px) and (min-width: 480px) {
+        .left, .right, .sidenav, .center-button{
+            display: none;
+            transition: all .3s ease;
+        }
+        .home-container{
+            grid-template-columns: 1fr;
+        }
+        .mobile-home{
+            padding-bottom: 100px;
+            min-height: 100vh;
+        }
+        .mobile-home img{
+            border-radius: 50%;
+            width: 20%;
         }
     }
 </style>
