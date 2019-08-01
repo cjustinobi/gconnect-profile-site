@@ -3,7 +3,7 @@
         <div class="go-home1">
             <nuxt-link to="/"><i class="fa fa-angle-left fa-3x"></i></nuxt-link>
         </div>
-        <form>
+        <!--<form>
             <h1 class="caption">Let's meet</h1>
 
             <span v-show="allFieldsRequired">All Fields are required</span>
@@ -29,7 +29,7 @@
                 </textarea>
 
             <button class="submit-btn empty-purpose" @click.prevent="emptyPurpose" v-show="details.purpose == ''">{{ purposeAlert }}</button>
-            <button v-show="details.purpose" class="submit-btn" @click.prevent="sendEmail">Shoot it</button>
+            <button v-show="details.purpose" class="submit-btn" @click.prevent="sendEmail">Shoot it</button>-->
         </form>
     </div>
 </template>
@@ -56,10 +56,7 @@
                     email: '',
                     purpose: '',
                     message: ''
-                },
-                service_id: 'gmail',
-                template_id: 'template_rQhaXHhW',
-                user_id: 'user_J6Odr7ZAPz20EGq3RLR8A'
+                }
             }
         },
 
@@ -77,14 +74,6 @@
                     this.details.message !== ''
                 ) {
 
-                    const template_params = {
-                        'from_email': this.details.email,
-                        'from_name': this.details.fullname,
-                        'purpose': this.details.purpose,
-                        'message_html': this.details.message
-                    }
-
-                    emailjs.send(this.service_id,this.template_id,template_params,this.user_id);
 
                 } else {
 
@@ -122,9 +111,6 @@
 
         mounted() {
             this.watchRoute()
-            let script = document.createElement('script')
-            script.setAttribute('src', 'https://cdn.emailjs.com/sdk/2.2.4/email.min.js')
-            document.head.appendChild(script)
         }
     }
 </script>
